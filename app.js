@@ -3,6 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const cookieSession = require('cookie-session')
 const cookieParser = require('cookie-parser')
+const routes = require('./routes')
 
 const app = express()
 
@@ -24,6 +25,12 @@ app.set('view engine', 'pug')
 app.get('/', (req, res, next) => {
   res.render('index')
 })
+
+app.get('/login', routes)
+app.get('/signup', routes)
+
+app.post('/signup', routes)
+app.post('/login', routes)
 
 const port = process.env.PORT || 3000
 

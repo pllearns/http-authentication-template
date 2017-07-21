@@ -2,18 +2,19 @@ extends layout
 
 block content 
 
-  h1 Login here!
-  if error 
-    h2.error.message=error
-  
-  p Login
-    form(method="post" action"/login)
+  h1 Hello Stranger
+    if error 
+      h2.error-message=error
+    
+    p.col-sm-10 Login Here 
+      form.form-horizontal(method="post" action="/login")
+        div.form-group
+        div.col-sm-10
+          input(type="text" name="user[email]", placeholder="email", value=email)
+        div.col-sm-10
+          input(type="password", name="user[password", placeholder="password")
+        div.col-sm-10
+          input(type="submit", value="Login")
+          div
 
-      div
-        input(type="text" name="email", placeholder="email")
-      div 
-        input(type="password" name="password", placeholder="password")
-      div 
-        input(type="submit", value="login")
-    div
-      a.btn.btn-default(href="/signup") Signup
+            a.btn-btn-default(href="/signup") Signup 
