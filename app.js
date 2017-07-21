@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const cookieSession = require('cookie-session')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 
