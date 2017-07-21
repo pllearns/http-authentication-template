@@ -2,7 +2,7 @@ extends layout
 
 block content 
 
-  h1 sign up!
+  h1 Hello Stranger
     if error 
       h2.error-message=error
     
@@ -12,7 +12,9 @@ block content
         div.col-sm-10
           input(type="text" name="user[email]", placeholder="email", value=email)
         div.col-sm-10
-          input(type="password", name="user[password", placeholder="password")
+          input(type="password", name="user[password]", placeholder="password")
+        div.col-sm-10
+          input(type="password", name="user[password_confirmation]", placeholder="password confirmation")
         div.col-sm-10
           input(type="submit", value="Signup Here")
           div
